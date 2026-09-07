@@ -59,12 +59,18 @@ Fotos/Logo gehören in `bilder/` (exakte Dateinamen siehe
 `bilder/HIER-BILDER-ABLEGEN.txt`). Fehlt ein Hero-Foto, bleibt der
 ILG-Farbverlauf stehen – nichts geht kaputt.
 
-## Ad-Creatives
+## Ad-Creatives & Werbetexte
 
-Im Ordner `creatives/` liegen fertige META-Motive je Stelle in zwei Formaten:
+Im Ordner `creatives/` liegen fertige META-Motive je Stelle – jeweils in zwei
+Formaten **und** zwei Stilen (zum A/B-Testen):
 
-- `creative-<stelle>-4x5.png`   – 1080 × 1350 px (Feed / Beitrag)
-- `creative-<stelle>-story.png` – 1080 × 1920 px (Story / Reels)
+- `creative-<stelle>-4x5.png` / `-story.png` – **Foto-Version** (echtes ILG-Foto)
+- `creative-<stelle>-clean-4x5.png` / `-clean-story.png` – **Clean-/Grafik-Version**
+
+Formate: 4x5 = 1080 × 1350 px (Feed), story = 1080 × 1920 px (Story/Reels).
+
+Die passenden **Anzeigentexte** (Primärtext, Überschriften, Beschreibung,
+Targeting, Kampagnen-Setup) stehen in **`WERBETEXTE.md`**.
 
 Empfohlene Ziel-URL der Ad je Motiv: der passende Deeplink oben
 (z. B. QS-Motiv → `…/?stelle=qualitaetssicherung`).
