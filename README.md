@@ -14,24 +14,17 @@ Aufbau 1:1 an der ALWA-Karriereseite orientiert – im ILG-Corporate-Design (Bla
 - `bilder/` – hier Logo & Hero-Fotos ablegen (siehe `bilder/HIER-BILDER-ABLEGEN.txt`)
 - `.nojekyll` – sorgt dafür, dass GitHub Pages die Dateien 1:1 ausliefert
 
-## ⚠️ Vor dem Livegang: LeadTable-Webhook eintragen
+## LeadTable-Anbindung (aktiv)
 
-Die Bewerbungen werden per Webhook an die **LeadTable-Kachel** übergeben:
+Jede abgeschlossene Bewerbung wird per Webhook an die **LeadTable-Kachel**
+übergeben:
 
 > https://portal.lead-table.com/customer/6a9e883851985db22f0468db/table/6a9e88443f84499505e63f81/leads
 
-In `index.html` steht dafür die Variable `WEBHOOK_URL` – aktuell mit
-Platzhalter `DEIN_WEBHOOK_TOKEN_HIER`. **So den echten Link einsetzen:**
-
-1. LeadTable öffnen → diese Tabelle (ILG Drehteile) auswählen.
-2. Integrationen / **„Generic Webhook"** öffnen und den generierten Link kopieren
-   (Format: `https://api.lead-table.com/api/webhook/generic/<TOKEN>`).
-3. In `index.html` bei `var WEBHOOK_URL = "…"` einsetzen und pushen.
-
-Der Token ist signiert (JWT) und lässt sich nur in LeadTable erzeugen – deshalb
-kann er hier nicht vorab hinterlegt werden. Solange der Platzhalter steht,
-erscheint in der Browser-Konsole eine Warnung und es wird **kein** Lead
-zuverlässig übergeben.
+Der Generic-Webhook-Link ist in `index.html` in der Variable `WEBHOOK_URL`
+**hinterlegt und aktiv** (Host `api-v2.lead-table.com`). Zum Wechseln der
+Ziel-Tabelle in LeadTable einen neuen „Generic Webhook"-Link erzeugen und dort
+ersetzen.
 
 Übergebene Felder u. a.: `vorname`, `nachname`, `name`, `email`, `telefon`,
 `stelle`, `erfahrung`, `lebenslauf`, `datenschutz`, `quelle`, `seite`.
@@ -85,7 +78,6 @@ Empfohlene Ziel-URL der Ad je Motiv: der passende Deeplink oben
 
 ## Noch prüfen / anpassen (Kunde)
 
-- **LeadTable-Webhook** eintragen (siehe oben) – Pflicht vor Livegang.
 - **Rechts-Links** im Footer & Formular: `…/impressum/` und `…/datenschutz/`
   auf die tatsächlichen ILG-URLs prüfen (Pfad ggf. anpassen).
 - **Kontakt-E-Mail** `info@ilg-drehteile.de` ggf. durch eine dedizierte

@@ -688,22 +688,17 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7e8f7}
        customerID: 6a9e883851985db22f0468db
        tableID:    6a9e88443f84499505e63f81
 
-     So kommst du an den Link:
-       LeadTable → diese Tabelle öffnen → Integrationen / "Generic Webhook"
-       → den generierten Webhook-Link kopieren und unten einsetzen
-       (Format: https://api.lead-table.com/api/webhook/generic/<TOKEN>).
-     Der Token ist signiert (JWT) und kann nur in LeadTable erzeugt werden.
+     Der Webhook-Link (Generic Webhook aus LeadTable) ist aktiv hinterlegt.
+     Zum Wechseln der Ziel-Tabelle in LeadTable neuen Link erzeugen und unten
+     ersetzen (Format: https://api-v2.lead-table.com/api/webhook/generic/<TOKEN>).
      ===================================================================== */
-  var WEBHOOK_URL   = "https://api.lead-table.com/api/webhook/generic/DEIN_WEBHOOK_TOKEN_HIER";
+  var WEBHOOK_URL   = "https://api-v2.lead-table.com/api/webhook/generic/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0YWJsZUlEIjoiNmE5ZTg4NDQzZjg0NDk5NTA1ZTYzZjgxIiwiY3VzdG9tZXJJRCI6IjZhOWU4ODM4NTE5ODVkYjIyZjA0NjhkYiIsImFnZW5jeUlEIjoiNjliZDc3NzVlNGQxN2IzOGVkNjUzZDE2IiwiaWF0IjoxNzg4Nzc0NDY4fQ.EbB6492CkM0bRU3aSSV6Ygp5Fp1Ordr42pFiWHoF4o4";
   var SUPABASE_URL  = "https://kxqdybjkcrowqdcpvlqa.supabase.co";
   var SUPABASE_KEY  = "sb_publishable_HRuh5O03dI84U_OngeWfRg_GwKnWkYp";
   var UPLOAD_BUCKET = "bewerbungen";
   var UPLOAD_MAX    = 10 * 1024 * 1024;
   var UPLOAD_TYPES  = ["application/pdf","image/jpeg","image/png","image/webp","application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
   var SCREEN_OUT    = ["Keine Ausbildung und keine Erfahrung im Bereich"];
-
-  if (WEBHOOK_URL.indexOf("DEIN_WEBHOOK_TOKEN_HIER") !== -1)
-    console.warn("[ILG] Achtung: LeadTable-WEBHOOK_URL ist noch ein Platzhalter – Bewerbungen werden erst nach dem Einsetzen des echten Generic-Webhook-Links an LeadTable übergeben.");
 
   var ALIASES = {
     "qualitaetssicherung":"qualitaetssicherung","qualitätssicherung":"qualitaetssicherung","qs":"qualitaetssicherung","pruefung":"qualitaetssicherung","qm":"qualitaetssicherung",
