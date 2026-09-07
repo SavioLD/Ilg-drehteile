@@ -1,0 +1,26 @@
+ILG Drehteile Karriereseite – Bilder & Logo
+===========================================
+
+Alles in DIESEN Ordner (bilder/) legen, exakt mit diesen Dateinamen:
+
+LOGO (Original ILG-Logo)
+  ilg-logo.svg           -> farbig/dunkel, fuer hellen Header (SVG bevorzugt; .png geht auch)
+  ilg-logo-weiss.svg     -> WEISSE Version, fuer Hero & Footer (dunkler Grund)
+  (Wird ein Logo gefunden, ersetzt es automatisch den Text-Schriftzug "iLG".
+   Fehlt es, bleibt der Text-Schriftzug stehen.)
+
+HERO-FOTOS (Querformat, mind. ~1600 px breit)
+  hero.jpg                -> allgemeines Hero-Bild (Startseite ohne ?stelle=)
+  qualitaetssicherung.jpg -> bei ?stelle=qualitaetssicherung  (z. B. Messmaschine / Messraum)
+  einrichter.jpg          -> bei ?stelle=einrichter            (z. B. CNC-Langdrehmaschine)
+  zerspanung.jpg          -> bei ?stelle=zerspanung            (z. B. Drehteile / Bediener an Maschine)
+  (Motiv eher RECHTS platzieren - links liegt der Text.
+   Fehlt ein Bild, bleibt der Farbverlauf stehen - nichts geht kaputt.)
+
+TIPP: Die vom Kunden gelieferten Fotos passen ideal:
+  - Jenoptik Opticline Messmaschine  -> qualitaetssicherung.jpg
+  - Hanwha CNC-Langdrehmaschine       -> einrichter.jpg
+  - Blick in die Fertigungshalle      -> hero.jpg / zerspanung.jpg
+  - Aussenansicht Firmengebaeude      -> hero.jpg (Alternative)
+
+Diese .txt kann nach dem Hochladen geloescht werden.
