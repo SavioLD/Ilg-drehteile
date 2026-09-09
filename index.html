@@ -538,7 +538,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7e8f7}
     <div class="form-card">
       <div class="form-card__head">
         <div class="progress"><div class="progress__bar" id="progressBar"></div></div>
-        <div class="progress__label"><span id="stepLabel">Schritt 1 von 3</span><span>~60 Sek.</span></div>
+        <div class="progress__label"><span id="stepLabel">Schritt 1 von 5</span><span>~60 Sek.</span></div>
       </div>
 
       <form class="form-card__body" id="applyForm" novalidate>
@@ -561,15 +561,41 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7e8f7}
           <p class="hint">Bei ILG arbeiten Menschen, die ihr Handwerk verstehen. Sei einfach ehrlich.</p>
           <p class="q">Welche Qualifikation bringst du für die Stelle mit?<span class="req">*</span></p>
           <div class="choice-grid" data-field="erfahrung">
-            <label class="choice"><input type="radio" name="erfahrung" value="Abgeschlossene Ausbildung im Bereich + mehrjährige Berufserfahrung" /><span class="key">A</span><span>Abgeschlossene Ausbildung im Bereich <small>+ mehrjährige Berufserfahrung</small></span></label>
-            <label class="choice"><input type="radio" name="erfahrung" value="Abgeschlossene Ausbildung im Bereich" /><span class="key">B</span><span>Abgeschlossene Ausbildung im Bereich</span></label>
-            <label class="choice"><input type="radio" name="erfahrung" value="Mehrjährige Berufserfahrung im Bereich (ohne passende Ausbildung)" /><span class="key">C</span><span>Mehrjährige Berufserfahrung im Bereich <small>ohne passende Ausbildung</small></span></label>
-            <label class="choice"><input type="radio" name="erfahrung" value="Keine Ausbildung und keine Erfahrung im Bereich" /><span class="key">D</span><span>Weder Ausbildung noch Erfahrung im Bereich</span></label>
+            <label class="choice"><input type="radio" name="erfahrung" data-score="3" value="Abgeschlossene Ausbildung im Bereich + mehrjährige Berufserfahrung" /><span class="key">A</span><span>Abgeschlossene Ausbildung im Bereich <small>+ mehrjährige Berufserfahrung</small></span></label>
+            <label class="choice"><input type="radio" name="erfahrung" data-score="3" value="Abgeschlossene Ausbildung im Bereich" /><span class="key">B</span><span>Abgeschlossene Ausbildung im Bereich</span></label>
+            <label class="choice"><input type="radio" name="erfahrung" data-score="2" value="Mehrjährige Berufserfahrung im Bereich (ohne passende Ausbildung)" /><span class="key">C</span><span>Mehrjährige Berufserfahrung im Bereich <small>ohne passende Ausbildung</small></span></label>
+            <label class="choice"><input type="radio" name="erfahrung" data-score="0" value="Keine Ausbildung und keine Erfahrung im Bereich" /><span class="key">D</span><span>Weder Ausbildung noch Erfahrung im Bereich</span></label>
           </div>
         </div>
 
         <!-- STEP 3 -->
         <div class="fstep" data-step="3">
+          <h3>Dein technisches Handwerkszeug</h3>
+          <p class="hint">Bei Präzisionsdrehteilen zählt der Blick fürs Maß.</p>
+          <p class="q">Wie vertraut bist du mit technischen Zeichnungen &amp; Messmitteln (z.&nbsp;B. Messschieber, Mikrometer)?<span class="req">*</span></p>
+          <div class="choice-grid" data-field="messmittel">
+            <label class="choice"><input type="radio" name="messmittel" data-score="3" value="Sehr vertraut – täglich im Einsatz" /><span class="key">A</span><span>Sehr vertraut <small>täglich im Einsatz</small></span></label>
+            <label class="choice"><input type="radio" name="messmittel" data-score="2" value="Gute Grundkenntnisse" /><span class="key">B</span><span>Gute Grundkenntnisse</span></label>
+            <label class="choice"><input type="radio" name="messmittel" data-score="1" value="Wenig – ich lerne aber schnell" /><span class="key">C</span><span>Wenig – ich lerne aber schnell</span></label>
+            <label class="choice"><input type="radio" name="messmittel" data-score="0" value="Gar nicht" /><span class="key">D</span><span>Gar nicht</span></label>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="fstep" data-step="4">
+          <h3>Verständigung im Team</h3>
+          <p class="hint">Prüfpläne, Doku, Absprachen – dafür ist Deutsch im Alltag wichtig.</p>
+          <p class="q">Wie gut ist dein Deutsch für Prüfpläne &amp; Dokumentation?<span class="req">*</span></p>
+          <div class="choice-grid" data-field="deutsch">
+            <label class="choice"><input type="radio" name="deutsch" data-score="3" value="Muttersprache / sehr gut" /><span class="key">A</span><span>Muttersprache / sehr gut</span></label>
+            <label class="choice"><input type="radio" name="deutsch" data-score="2" value="Gut" /><span class="key">B</span><span>Gut</span></label>
+            <label class="choice"><input type="radio" name="deutsch" data-score="1" value="Grundkenntnisse" /><span class="key">C</span><span>Grundkenntnisse</span></label>
+            <label class="choice"><input type="radio" name="deutsch" data-score="0" value="Kaum" /><span class="key">D</span><span>Kaum</span></label>
+          </div>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="fstep" data-step="5">
           <h3>Du hast es fast geschafft</h3>
           <p class="hint">Hinterlasse kurz deine Kontaktdaten. Wir melden uns persönlich bei dir.</p>
           <div class="frow">
@@ -608,7 +634,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7e8f7}
         <div class="result" id="screenoutView">
           <div class="result__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg></div>
           <h3>Danke für dein Interesse</h3>
-          <p>Für diese Stelle setzen wir eine abgeschlossene Ausbildung oder einschlägige Berufserfahrung voraus. Aktuell passt das leider noch nicht. Du bist überzeugt, dass du trotzdem zu uns passt? Dann schreib uns gerne direkt an <a href="mailto:info@ilg-drehteile.de">info@ilg-drehteile.de</a>.<br /><br />Aus Versehen falsch angeklickt? Lade die Seite einfach neu und versuche es erneut.</p>
+          <p>Vielen Dank, dass du dir die Zeit genommen hast. Für diese Stelle setzen wir einige Grundvoraussetzungen voraus – nach deinen Angaben passt das aktuell leider noch nicht ganz. Du bist überzeugt, dass du trotzdem zu uns passt? Dann schreib uns gerne direkt an <a href="mailto:info@ilg-drehteile.de">info@ilg-drehteile.de</a>.<br /><br />Aus Versehen falsch angeklickt? Lade die Seite einfach neu und versuche es erneut.</p>
         </div>
 
         <div class="fnav" id="formNav">
@@ -699,6 +725,11 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7e8f7}
   var UPLOAD_MAX    = 10 * 1024 * 1024;
   var UPLOAD_TYPES  = ["application/pdf","image/jpeg","image/png","image/webp","application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
   var SCREEN_OUT    = ["Keine Ausbildung und keine Erfahrung im Bereich"];
+  // Vorfilterung: Punkte über die Qualifizierungsfragen (erfahrung + messmittel + deutsch,
+  // je 0–3). Wer den Schwellenwert nicht erreicht ODER gar keine Qualifikation angibt,
+  // wird freundlich abgelehnt (kein Lead an LeadTable).
+  var SCORE_FIELDS  = ["erfahrung","messmittel","deutsch"];
+  var SCORE_MIN     = 4; // < 4 von max. 9 = abgelehnt
 
   var ALIASES = {
     "qualitaetssicherung":"qualitaetssicherung","qualitätssicherung":"qualitaetssicherung","qs":"qualitaetssicherung","pruefung":"qualitaetssicherung","qm":"qualitaetssicherung",
@@ -781,10 +812,14 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7e8f7}
     btnNext.disabled=!stepValid(current);
     errBox.classList.remove("is-visible");
   }
-  function isScreenedOut(){ return SCREEN_OUT.indexOf(selectedValue("erfahrung"))!==-1; }
+  function scoreOf(name){ var c=form.querySelector('input[name="'+name+'"]:checked'); return c?(parseInt(c.getAttribute("data-score"),10)||0):0; }
+  function totalScore(){ var s=0; SCORE_FIELDS.forEach(function(n){ s+=scoreOf(n); }); return s; }
+  function isScreenedOut(){ return SCREEN_OUT.indexOf(selectedValue("erfahrung"))!==-1 || totalScore()<SCORE_MIN; }
+  // Letzte Qualifizierungsfrage = Schritt direkt vor den Kontaktdaten.
+  var SCREEN_STEP = TOTAL - 1;
   function next(){
     if (locked || !stepValid(current) || submitting) return;
-    if (current===2 && isScreenedOut()){ showScreenout(); return; }
+    if (current===SCREEN_STEP && isScreenedOut()){ showScreenout(); return; }
     if (current===TOTAL){ submit(); return; }
     current++; render();
     var card=document.querySelector(".form-card");
@@ -880,7 +915,8 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7e8f7}
   function collect(){
     function val(name){ var c=form.querySelector('input[name="'+name+'"]:checked'); if(c) return c.value; var inp=form.querySelector('input[name="'+name+'"]:not([type="radio"])'); return inp?inp.value.trim():""; }
     return { vorname:val("vorname"), nachname:val("nachname"), name:(val("vorname")+" "+val("nachname")).trim(), email:val("email"), telefon:val("telefon"),
-             stelle:val("stelle"), erfahrung:val("erfahrung"), lebenslauf:"", datenschutz:"Ja (Einwilligung mit Absenden, Art. 6 Abs. 1 lit. a DSGVO)",
+             stelle:val("stelle"), erfahrung:val("erfahrung"), messmittel:val("messmittel"), deutsch:val("deutsch"), qualifikation_score:String(totalScore())+" / 9",
+             lebenslauf:"", datenschutz:"Ja (Einwilligung mit Absenden, Art. 6 Abs. 1 lit. a DSGVO)",
              quelle:"Karriere-Landingpage ILG Drehteile", seite:location.href };
   }
   function submit(){

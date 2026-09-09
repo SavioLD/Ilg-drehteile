@@ -38,12 +38,26 @@ setzt die Hero-Headline und startet beim Erfahrungs-Schritt:
 - `…/?stelle=einrichter`
 - `…/?stelle=zerspanung`
 
-## Screening / Vorfilterung
+## Screening / Vorfilterung (Punktesystem)
 
-Wer bei der Erfahrungsfrage „**Weder Ausbildung noch Erfahrung im Bereich**"
-wählt, wird höflich aus dem Prozess genommen (kein Lead an LeadTable). So kommen
-qualifiziertere Bewerbungen an. Ein Seiten-Neuladen startet frisch – es gibt
-keine dauerhafte Sperre.
+Der Funnel stellt **3 Qualifizierungsfragen** (je 0–3 Punkte, max. 9):
+
+1. **Qualifikation** (Ausbildung/Erfahrung) – A/B = 3, C = 2, D („weder …") = 0
+2. **Technische Zeichnungen & Messmittel** – A = 3, B = 2, C = 1, D = 0
+3. **Deutschkenntnisse** (Prüfpläne/Doku) – A = 3, B = 2, C = 1, D = 0
+
+Ausgewertet wird **nach der letzten Frage** (vor den Kontaktdaten). Abgelehnt
+wird freundlich (kein Lead an LeadTable), wenn
+
+- die **Gesamtpunktzahl < 4** ist (jemand füllt alles maximal schlecht aus), **oder**
+- bei Frage 1 „**Weder Ausbildung noch Erfahrung**" gewählt wurde (harte Grenze).
+
+Andernfalls geht die Bewerbung durch; im Lead landen zusätzlich die Felder
+`messmittel`, `deutsch` und `qualifikation_score` (z. B. „6 / 9") – so lassen
+sich Bewerbungen in LeadTable nach Qualität sortieren.
+
+Schwelle anpassen: in `index.html` die Variable **`SCORE_MIN`** ändern
+(höher = strenger). Ein Seiten-Neuladen startet frisch – keine dauerhafte Sperre.
 
 ## Lebenslauf-Upload (optional)
 
