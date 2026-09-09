@@ -873,7 +873,8 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7e8f7}
       return fetch(SUPABASE_URL+"/storage/v1/object/"+UPLOAD_BUCKET+"/"+path, { method:"POST", headers:{ "apikey":SUPABASE_KEY,"Authorization":"Bearer "+SUPABASE_KEY,"Content-Type":cvFile.type,"x-upsert":"false" }, body:cvFile })
         .then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); return SUPABASE_URL+"/storage/v1/object/public/"+UPLOAD_BUCKET+"/"+path; });
     }
-    return attempt().catch(function(){ return attempt().catch(function(){ var e=new Error("upload_failed"); e.isUploadError=true; throw e; }); });
+    // Optionaler Upload: schlaegt er fehl, blockiert er die Bewerbung NICHT.
+    return attempt().catch(function(){ return attempt().catch(function(){ return "__upload_failed__"; }); });
   }
 
   function collect(){
@@ -887,14 +888,14 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d7e8f7}
     submitting=true; btnNext.disabled=true; btnNext.textContent=cvFile?"Lebenslauf wird hochgeladen …":"Wird gesendet …"; errBox.classList.remove("is-visible");
     uploadCv().then(function(cvUrl){
       btnNext.textContent="Wird gesendet …";
-      var data=collect(); data.lebenslauf=cvUrl||"nicht hochgeladen"; var payload=JSON.stringify(data);
+      var data=collect();
+      data.lebenslauf=(cvUrl==="__upload_failed__")?("Upload fehlgeschlagen"+(cvFile?" ("+cvFile.name+") – Bewerber ggf. per E-Mail nachfassen":"")):(cvUrl||"nicht hochgeladen"); var payload=JSON.stringify(data);
       return fetch(WEBHOOK_URL,{ method:"POST", headers:{ "Content-Type":"application/json" }, body:payload })
         .then(function(res){ if(!res.ok) throw new Error("HTTP "+res.status); finishSuccess(); })
         .catch(function(){ return fetch(WEBHOOK_URL,{ method:"POST", mode:"no-cors", headers:{ "Content-Type":"text/plain" }, body:payload }).then(finishSuccess); });
-    }).catch(function(err){
+    }).catch(function(){
       submitting=false; btnNext.disabled=false; btnNext.textContent="Bewerbung absenden";
-      if (err&&err.isUploadError) setUploadError("Der Upload hat leider nicht geklappt. Bitte versuche es noch einmal – oder entferne die Datei über das × und schicke den Lebenslauf später an info@ilg-drehteile.de.");
-      else errBox.classList.add("is-visible");
+      errBox.classList.add("is-visible");
     });
   }
 

@@ -48,10 +48,17 @@ keine dauerhafte Sperre.
 ## Lebenslauf-Upload (optional)
 
 Nutzt Supabase Storage (Bucket `bewerbungen`, gemeinsames Agentur-Projekt).
-Ist der Bucket bereits von einer anderen Karriereseite angelegt, ist nichts zu
-tun. Andernfalls einmalig `supabase-bewerbungen.sql` im Supabase-SQL-Editor
-ausführen – danach landet im LeadTable-Feld `lebenslauf` ein direkt öffenbarer
-Link.
+
+**Wichtig:** Der Upload ist bewusst **nicht blockierend**. Klappt er nicht
+(z. B. Bucket/Policy im Supabase-Projekt noch nicht angelegt oder Projekt
+pausiert), wird die Bewerbung **trotzdem** normal gesendet – der Bewerber sieht
+„Bewerbung eingegangen", und im LeadTable-Feld `lebenslauf` steht dann
+`Upload fehlgeschlagen (<Dateiname>) – Bewerber ggf. per E-Mail nachfassen`.
+
+Damit der Upload wirklich funktioniert (öffenbarer Link im Feld `lebenslauf`):
+einmalig `supabase-bewerbungen.sql` im Supabase-SQL-Editor des Projekts
+ausführen (legt Bucket + Anon-Insert-Policy an). Ist er von einer anderen
+Karriereseite bereits angelegt, genügt es zu prüfen, dass das Projekt aktiv ist.
 
 ## Bilder & Logo
 
