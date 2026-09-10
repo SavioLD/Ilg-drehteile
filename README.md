@@ -1,8 +1,8 @@
 # ILG Drehteile – Karriereseite
 
 Recruiting-Landingpage / Ad-Funnel für die **ILG Drehteile GmbH** (Wellendingen).
-Aktuell gesucht: **Mitarbeiter Qualitätssicherung (m/w/d)**. Weitere Stellen:
-Einrichter CNC-Langdrehen und Zerspanungsmechaniker / CNC-Dreher (m/w/d).
+Aktuell gesucht (einzige offene Stelle auf der Seite): **Mitarbeiter
+Qualitätssicherung (m/w/d)**.
 
 Aufbau 1:1 an der ALWA-Karriereseite orientiert – im ILG-Corporate-Design (Blau).
 
@@ -29,14 +29,12 @@ ersetzen.
 Übergebene Felder u. a.: `vorname`, `nachname`, `name`, `email`, `telefon`,
 `stelle`, `erfahrung`, `lebenslauf`, `datenschutz`, `quelle`, `seite`.
 
-## Stellen-Deeplinks für die Ad
+## Ad-Deeplink
 
-Die Anzeige kann direkt auf eine Stelle verlinken; die Seite wählt sie vor,
-setzt die Hero-Headline und startet beim Erfahrungs-Schritt:
-
-- `…/?stelle=qualitaetssicherung`  ← **aktuelle Kampagne (QS)**
-- `…/?stelle=einrichter`
-- `…/?stelle=zerspanung`
+Es gibt nur eine offene Stelle. Für die Anzeige empfiehlt sich der Deeplink
+`…/?stelle=qualitaetssicherung` – er setzt Hero-Headline und Hero-Foto auf die
+QS-Stelle (das Formular startet ohnehin direkt bei der ersten Frage). Ohne
+Parameter zeigt der Hero das allgemeine Firmen-Motiv.
 
 ## Screening / Vorfilterung (Punktesystem)
 
@@ -109,5 +107,6 @@ Empfohlene Ziel-URL der Ad je Motiv: der passende Deeplink oben
   auf die tatsächlichen ILG-URLs prüfen (Pfad ggf. anpassen).
 - **Kontakt-E-Mail** `info@ilg-drehteile.de` ggf. durch eine dedizierte
   Bewerbungs-Adresse ersetzen.
-- **Stellenauswahl**: QS ist das aktuelle Ziel-Motiv. Einrichter & Zerspanung
-  sind als weitere passende Positionen angelegt – bei Bedarf entfernen/ändern.
+- **Nur eine Stelle**: Auf der Seite ist ausschließlich die Qualitätssicherung
+  ausgeschrieben. Creatives/Werbetexte für Einrichter & Zerspanung liegen weiter
+  in `creatives/` bzw. `WERBETEXTE.md`, werden aber nicht verwendet.
