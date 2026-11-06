@@ -97,3 +97,35 @@ Jetzt in 60 Sek. bewerben – Lebenslauf optional.
 - **Schnell reagieren.** Leads in LeadTable am selben Tag anrufen.
 - **Budget:** klein starten (15–25 €/Tag pro Anzeigengruppe), nach 3–4 Tagen
   auf die beste Creative/Text-Kombi skalieren.
+
+---
+
+## 6. Bold / Volumen-Variante („in die Fresse") — für mehr Bewerbungen
+
+**Creatives:** `creative-cnc-dreher-bold-4x5.png` · `creative-cnc-dreher-bold-story.png`
+(gelber Rahmen, gelbes „GESUCHT!", fetter gelber CTA – sticht im Feed raus)
+
+### Primärtext — laut & direkt
+```
+🚨 CNC-DREHER / ZERSPANER (m/w/d) – WIR SUCHEN DICH!
+
+Schluss mit der Jobsuche. Bei ILG Drehteile in Wellendingen drehst du an
+Hanwha, Star & Tornos (Fanuc) – und wirst fair bezahlt.
+
+✅ 13. Monatsgehalt + Tankgutschein
+✅ Arbeitskleidung + VWL & BAV
+✅ Unbefristet & familiengeführt
+
+Kein Anschreiben. Kein Stress. In 60 Sekunden bewerben 👇
+```
+
+### Überschriften
+- `CNC-DREHER (m/w/d) GESUCHT!`
+- `Dein neuer Job wartet – jetzt!`
+- `Dreh bei uns auf 🔧`
+
+### Beschreibung
+- `Unbefristet · 13. Gehalt · in 60 Sek. bewerben`
+
+> Diese Variante zielt auf **Masse** (niedrige Hürde, Geld/Benefits, Urgency).
+> Die KO-Vorfilterung übernimmt dann das Formular → viele Leads, sauber gefiltert.
